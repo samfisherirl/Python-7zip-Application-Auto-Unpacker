@@ -45,6 +45,6 @@ if __name__ == '__main__':
   # does file exist (sometimes file can take time to export)  
   if is_extraction_complete(file_to_run):
       # run File
-      powershell([file_to_run])
+      run_powershell([file_to_run])
   else:
     print("\n\nError, file designated to run was not found.")
