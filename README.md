@@ -4,8 +4,11 @@ Script for ahk subreddit discussion.
 Substitute for setup, install or multi-exe solution. 
 
 1- Store an app in 7zip
+
 2- Extracts from subprocess/powershell
+
 3- runs app, checks for files existance 
+
 
 https://www.reddit.com/r/AutoHotkey/comments/11kvtpj/comment/jb96dv7/?context=3
 
