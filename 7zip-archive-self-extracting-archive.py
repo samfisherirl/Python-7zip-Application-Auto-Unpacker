@@ -5,8 +5,7 @@ from time import sleep
 cwd = Path.cwd() # working dir
 cwd = cwd / 'exports' 
 # exports C:\__mainfile__\exports\__7zip-file__
-# change to subfolder to prevent files going everywhere on extract
-
+# this script == '__mainfile__'
 sevenz = cwd /  '7za.exe'
 file = cwd / 'exports.7z' # my app archive
 sevenz_cmd = ['PowerShell.exe', sevenz, 'x', file, '-y', '-p321']
