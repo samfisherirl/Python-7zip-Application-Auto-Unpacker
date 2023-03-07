@@ -29,15 +29,22 @@ def powershell(cmd):
   lines = p_out.splitlines() 
   print(lines)
 
-if __name__ == '__main__':
-  powershell(sevenz_cmd) 
-  # exported, now check for file existance 
+def is_extraction_complete(file_to_run):
   for i in range(0, 10):
     if file_to_run.is_file(): 
-      # does file exist (sometimes file can take time to export)
-      powershell([file_to_run])
       # if exist, run app in archive
+      return True
     else:
       sleep(1)
-      print('\n\nwaiting for export from else')
+      print('\n\nwaiting for export from else statement')
+  return False
+  
 
+if __name__ == '__main__':
+  powershell(sevenz_cmd) 
+  # does file exist (sometimes file can take time to export)  
+  if is_extraction_complete(file_to_run):
+      # run File
+      powershell([file_to_run])
+  else:
+    print("\n\nError, file designated to run was not found.")
