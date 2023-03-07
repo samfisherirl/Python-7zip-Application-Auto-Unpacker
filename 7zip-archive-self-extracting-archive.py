@@ -18,7 +18,7 @@ sevenz_cmd = ['PowerShell.exe', sevenz, 'x', file, '-y', '-p321']
 file_to_run = cwd / 'Steam_VDF_Main.exe' # my app
 
 
-def powershell(cmd):
+def run_powershell(cmd):
 
   p = subprocess.Popen(cmd, shell=True, cwd=cwd, stdout=subprocess.PIPE)
   print(p.stdout) 
@@ -41,7 +41,7 @@ def is_extraction_complete(file_to_run):
   
 
 if __name__ == '__main__':
-  powershell(sevenz_cmd) 
+  run_powershell(sevenz_cmd) 
   # does file exist (sometimes file can take time to export)  
   if is_extraction_complete(file_to_run):
       # run File
