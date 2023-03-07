@@ -4,7 +4,7 @@ from time import sleep
 
 cwd = Path.cwd() # working dir
 cwd = cwd / 'exports' 
-# exports is the folder below this file
+# exports C:\programdata\__mainfile__\exports\__7zip-file__
 # change to subfolder to prevent files going everywhere on extract
 
 sevenz = cwd /  '7za.exe'
