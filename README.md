@@ -1,4 +1,4 @@
-# Python-7zip-Launcher
+# Python-7zip-Application-Auto-Unpacker
 Script for ahk subreddit discussion.
 
 https://www.reddit.com/r/AutoHotkey/comments/11kvtpj/comment/jb96dv7/?context=3
