@@ -48,12 +48,15 @@ def is_extraction_complete(file_to_run):
       print('\n\nwaiting for export from else statement')
   return False
   
+  def main():
+
+    run_powershell(sevenz_cmd) 
+    # does file exist (sometimes file can take time to export)  
+    if is_extraction_complete(file_to_run):
+        # run File
+        run_powershell([file_to_run])
+    else:
+      print("\n\nError, file designated to run was not found.")
 
 if __name__ == '__main__':
-  run_powershell(sevenz_cmd) 
-  # does file exist (sometimes file can take time to export)  
-  if is_extraction_complete(file_to_run):
-      # run File
-      run_powershell([file_to_run])
-  else:
-    print("\n\nError, file designated to run was not found.")
+  main()
