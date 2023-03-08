@@ -13,7 +13,16 @@ cwd = cwd / 'exports'
 
 sevenz = cwd /  '7za.exe'
 file = cwd / 'exports.7z' # my app archive
+
+#########################################################################
 sevenz_cmd = ['PowerShell.exe', sevenz, 'x', file, '-y', '-p321']
+# 7Zip commands above:
+# x == extract with full paths 
+# -y == suppress all prompts
+# f'-p{password}' password for archive,
+# follows the lowercase '-p'. '321' is the password. as weird as it looks. 
+##########################################################################
+
 
 file_to_run = cwd / 'Steam_VDF_Main.exe' # my app
 
